@@ -15,7 +15,7 @@ html {
 
 li {
     list-style: none;
-
+    font-size: 1.8em;
 }
 
 a {
@@ -23,8 +23,14 @@ a {
     text-decoration: none;
 }
 
+#page-wrapper {
+    position: relative;
+}
+
 .grid {
     display: flex;
+    height: 10em;
+    justify-content: center;
 }
 
 .title {
@@ -32,7 +38,6 @@ a {
     font-size: 1.5em;
     color: var(--header-color);
     text-align: left;
-    /* margin-left: 50px; */
 }
 
 header {
@@ -43,18 +48,29 @@ header {
     align-items: center;
     width: 100%;
     min-height: 75px;
-
 }
 
-#page_wrapper {
-    position: relative;
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
 }
+
 
 .logo {
     width: 40vw;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+.btn {
+    background-color: #ffb703;
+    margin: 4px;
+    font-size: 1.7em;
+    font-weight: 700;
+    width: 25%;
+    height: 40px;
 }
 
 #header-img {
@@ -65,7 +81,6 @@ header {
 .navlink a {
     text-decoration: none;
     color: var(--header-color);
-
 }
 
 #navbar-list {
@@ -92,6 +107,7 @@ header {
 
 h2 {
     font-size: 2.5em;
+    padding: 0.2em 0;
 }
 
 .heading input[type='email'] {
@@ -111,27 +127,25 @@ h2 {
     color: #023047;
 }
 
-.btn {
-    background-color: #ffb703;
-    margin: 4px;
-    font-size: 1.7em;
-    font-weight: 700;
-}
-
 h3 {
     font-size: 1.8em;
     font-weight: 700;
+    padding: 0.1em 0;
+}
+
+#features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #features .icon {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color: #219ebc;
-    height: 125px;
-    width: 10vw;
-    font-size: 3.5em;
-    margin-left: 25%;
+    width: 20vw;
+    font-size: 5.8em;
 }
 
 #features>.grid>.description {
@@ -139,8 +153,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 125px;
-    width: 40vw;
+    /* height: 125px; */
+    width: 80vw;
     font-size: 1.4rem;
 }
 
@@ -151,16 +165,38 @@ h3 {
 #how_it_works {
     display: flex;
     justify-content: center;
-    margin: 3% 0;
-
-
+    margin: 7% 0;
 }
 
 #iframe {
-    box-shadow: 10px 14px 15px rgba(0, 23, 41, 0.5);
+    box-shadow: 10px 14px 25px rgba(0, 23, 41, 0.5);
 }
 
 #how-it-works>iframe {
     max-width: 560px;
     width: 100%;
+}
+
+.standard {
+    font-size: 2.2em;
+    font-weight: 600;
+    padding: 0.5em;
+    background-color: gray;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+#classes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#classes .levels {
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 23, 41, 0.5);
 }
