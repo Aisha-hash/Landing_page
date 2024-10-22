@@ -35,8 +35,6 @@ a:hover {
     cursor: pointer;
 }
 
-
-
 #page-wrapper {
     position: relative;
 
@@ -48,10 +46,16 @@ a:hover {
     justify-content: center;
 }
 
-.title {
-    width: 30vw;
-    font-size: 1.5em;
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60vw;
+}
+
+.logo h1 {
     color: var(--header-color);
+    font-size: 3em;
 }
 
 header {
@@ -63,7 +67,6 @@ header {
     width: 100%;
     min-height: 75px;
     background-color: #ddd7c9;
-    padding: 0px 20px;
 }
 
 .container {
@@ -72,12 +75,29 @@ header {
     margin: 0 auto;
 }
 
+#header-img {
+    width: 15%;
+    height: auto;
+}
 
-.logo {
-    width: 40vw;
+.navlink a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#navbar {
+    width: 35vw;
+}
+
+#navbar-list {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+}
+
+#navbar-list>li {
+    padding: 0 5%;
 }
 
 .btn {
@@ -93,37 +113,14 @@ header {
     cursor: pointer;
 }
 
-#header-img {
-    width: 21%;
-    height: auto;
-}
-
-.navlink a {
-    text-decoration: none;
-    color: #000000;
-}
-
-#navbar-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 30vw;
-    flex-wrap: wrap;
-}
-
-.navlink {
-    padding: 0 5%;
-}
-
 .heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 150px;
     height: 200px;
-
 }
 
 h2 {
@@ -149,7 +146,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: 700;
     padding: 0.1em 0;
 }
@@ -158,6 +155,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 #features .icon {
@@ -166,7 +164,7 @@ h3 {
     justify-content: center;
     color: #1e91d6;
     width: 20vw;
-    font-size: 5.8em;
+    font-size: 5.0em;
 }
 
 #features>.grid>.description {
@@ -188,13 +186,11 @@ h3 {
     margin: 7% 0;
 }
 
-#iframe {
-    box-shadow: 10px 14px 25px rgba(0, 23, 41, 0.5);
-}
-
-#how-it-works>iframe {
-    max-width: 560px;
+#how_it_works>iframe {
     width: 100%;
+    box-shadow: 10px 24px 25px rgba(0, 23, 41, 0.5);
+    max-width: 620px;
+    margin: 5%;
 }
 
 .standard {
@@ -221,7 +217,10 @@ h3 {
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgba(0, 23, 41, 0.5);
     padding-bottom: 10px;
-    height: 300px;
+}
+
+h4 {
+    font-size: 2.1em;
 }
 
 .levels>ul>li {
@@ -255,4 +254,54 @@ footer>span {
     justify-content: flex-end;
     font-size: 1.2em;
     color: #444;
+}
+
+@media (max-width:970px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 55%;
+    }
+
+    #classes {
+        flex-direction: column;
+    }
+
+    #classes .levels {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 300px;
+        margin-bottom: 3%;
+    }
+}
+
+@media (max-width: 830px) {
+    #navbar-list {
+        flex-direction: column;
+    }
+
+    #navbar-list>li {
+        padding: 5px 0;
+    }
+
+    main {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 620px) {
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    main {
+        margin-top: 200px;
+    }
+
+    #features .icon {
+        display: none;
+    }
 }
